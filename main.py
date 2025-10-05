@@ -355,6 +355,8 @@ def handle_energy(call):
         user_sessions[user_id]['energy'] = 100
     else:
         user_sessions[user_id]['energy'] = 150
+        
+    bot.edit_message_text("✅ Сохранено", call.message.chat.id, call.message.message_id)
     
     # Расчет результата
     data = user_sessions[user_id]
